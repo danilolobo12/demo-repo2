@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Space Adventure</title>
+    <link href="css/stylos.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+
+  <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.13.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+
+    <!--El evento onmousemove ocurre cuando el puntero se mueve mientras está sobre un elemento.-->
+    <div id="contenedor">
+      <div id="escenario" onmousemove="coordenada(event)">
+        <div id="contenedor-Preguntas">
+          <div id="pregunta"></div>
+          <div id="respuestas"></div>
+          <input
+            type="button"
+            value="Enviar"
+            onclick="comprobar()"
+            id="input"
+          />
+        </div>
+
+        <div id="Contador_respuestas">
+          <p id="p_contaador1">Respuesta corectas:</p>
+          <br />
+          <div id="correcto"></div>
+          <br />
+          <p id="p_contaador2">Respuesta Incorectas:</p>
+          <br />
+          <div id="Incorrecta"></div>
+        </div>
+
+        <div id="user">
+          <p>Usuario:</p>
+        </div>
+
+        <!-- Creamos los contenedores de cada ovni -->
+        <div class="base" id="base_1"></div>
+        <div class="base" id="base_2"></div>
+        <div class="base" id="base_3"></div>
+
+        <!-- Creamos el evento al pulsar el ovni -->
+        <div id="ovni_1" onclick="seleccionarOvni('ovni_1')"></div>
+        <div id="ovni_2" onclick="seleccionarOvni('ovni_2')"></div>
+        <div id="ovni_3" onclick="seleccionarOvni('ovni_3')"></div>
+
+        <!-- creamos el contenedor del dado -->
+        <div id="dado" onclick="cambiarDado()"></div>
+
+        <div
+          id="coordenada"
+          style="color: white; width: 50px; height: 30px;"
+        ></div>
+      </div>
+    </div>
+    <script src="js/funciones.js"></script>
+  </body>
+</html>

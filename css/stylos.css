@@ -1,0 +1,334 @@
+* {
+  position: absolute;
+  cursor: pointer;
+  font-family: arial;
+}
+
+body {
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+#contenedor {
+  background-color: beige;
+  background-size: 100% 100%;
+  width: 900px;
+  height: 800px;
+  border-radius: 20px;
+  border: black 5px solid;
+}
+
+#escenario {
+  background-image: url(../img/escenario_inicio.jpg);
+  width: 800px;
+  height: 500px;
+  top: 2%;
+  left: 5%;
+  border-radius: 8px;
+  border: black 3px solid;
+
+  /* creamos la animacion y la llamamos adelante */
+  animation-name: animacion_escenario;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+@keyframes animacion_escenario {
+  100% {
+    background-image: url(../img/escenario_juego.jpg);
+  }
+}
+
+#titulo {
+  background-image: url(../img/titulo.png);
+  width: 300px;
+  height: 66px;
+  left: 250px;
+  top: -60px;
+
+  animation-name: animacion_titulo;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animacion_titulo {
+  100% {
+    top: 10px;
+  }
+}
+
+.base {
+  background-image: url(../img/base.png);
+  width: 100px;
+  height: 86px;
+  top: 200px;
+  opacity: 0;
+
+  animation-name: animacion_base;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animacion_base {
+  100% {
+    opacity: 1;
+  }
+}
+
+#base_1 {
+  left: 200px;
+}
+
+#base_2 {
+  left: 350px;
+}
+
+#base_3 {
+  left: 500px;
+}
+
+#ovni_1 {
+  background-image: url(../img/ovni_1.png);
+  background-size: 100% 100%;
+  width: 90px;
+  height: 57px;
+  top: 210px;
+  left: 200px;
+}
+
+/* se activa al interactuar con la imagen */
+#ovni_1:hover {
+  width: 80px;
+  height: 47px;
+  top: 215px;
+  left: 205px;
+}
+
+#ovni_2 {
+  background-image: url(../img/ovni_2.png);
+  background-size: 100% 100%;
+  width: 90px;
+  height: 57px;
+  top: 210px;
+  left: 350px;
+}
+
+/* se activa al interactuar con la imagen */
+#ovni_2:hover {
+  width: 80px;
+  height: 47px;
+  top: 215px;
+  left: 355px;
+}
+
+#ovni_3 {
+  background-image: url(../img/ovni_3.png);
+  background-size: 100% 100%;
+  width: 90px;
+  height: 57px;
+  top: 210px;
+  left: 500px;
+}
+
+/* se activa al interactuar con la imagen */
+#ovni_3:hover {
+  width: 80px;
+  height: 47px;
+  top: 215px;
+  left: 505px;
+}
+
+#dado {
+  background-image: url(../img/d1.png);
+  background-size: 100% 100%;
+  width: 50px;
+  height: 50px;
+  right: 30px;
+  top: 520px;
+  opacity: 0;
+  border-radius: 10px;
+  border: black 1px solid;
+
+  animation-name: animacion_dado;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /*cantidad de veces que se repetirá la animación. */
+  animation-iteration-count: infinite;
+  /* velocidad en el tiempo de un objeto que se está animando */
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+@keyframes animacion_dado {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#contenedor-Preguntas {
+  width: 400px;
+  height: 180px;
+  left: 1000px;
+  top: 520px;
+  opacity: 0;
+
+  animation-name: animacion_preguntas;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+@keyframes animacion_preguntas {
+  100% {
+    left: 0px;
+    background-color: bisque;
+    border-radius: 10px;
+    border: black 3px solid;
+    opacity: 1;
+  }
+}
+
+#pregunta {
+  background-size: 100% 100%;
+  width: 300px;
+  height: 70px;
+  float: right;
+  top: 3px;
+  left: 12px;
+  opacity: 0;
+
+  animation-name: pregunta;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+@keyframes pregunta {
+  100% {
+    opacity: 1;
+  }
+}
+
+#input {
+  background-size: 100% 100%;
+  width: 90px;
+  height: 30px;
+  top: 140px;
+  left: 290px;
+  border-radius: 10px;
+  opacity: 0;
+
+  animation-name: input;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+@keyframes input {
+  100% {
+    opacity: 1;
+  }
+}
+
+#respuestas {
+  background-size: 100% 100%;
+  width: 300px;
+  height: 70px;
+  float: right;
+  left: 6%;
+  top: 50px;
+  opacity: 0;
+
+  animation-name: respuestas;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+@keyframes respuestas {
+  100% {
+    opacity: 1;
+  }
+}
+
+#Contador_respuestas {
+  background-size: 100% 100%;
+  width: 200px;
+  height: 100px;
+  float: right;
+  left: 1000px;
+  top: 104%;
+  opacity: 0;
+
+  animation-name: Contador_respuestas;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+@keyframes Contador_respuestas {
+  100% {
+    left: 55%;
+    background-color: bisque;
+    border-radius: 10px;
+    border: black 3px solid;
+    opacity: 1;
+  }
+}
+
+#user {
+  background-size: 100% 100%;
+  width: 300px;
+  height: 50px;
+  float: right;
+  left: 1000px;
+  top: 104%;
+  opacity: 0;
+
+  animation-name: Contador_user;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+@keyframes Contador_user {
+  100% {
+    left: 55%;
+    top: 130%;
+    background-color: bisque;
+    border-radius: 10px;
+    border: black 3px solid;
+    opacity: 1;
+  }
+}
+
+#Boton {
+  left: -8%;
+}
+
+#correcto {
+  background-size: 100% 100%;
+  width: 20px;
+  height: 20px;
+  top: 25px;
+  left: 4px;
+}
+
+#p_contaador1 {
+  top: -10px;
+  left: 4px;
+}
+
+#Incorrecta {
+  background-size: 100% 100%;
+  width: 20px;
+  height: 20px;
+  top: 70px;
+  left: 4px;
+}
+
+#p_contaador2 {
+  top: 30px;
+  left: 4px;
+}
