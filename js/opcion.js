@@ -1,0 +1,1 @@
+console.gol("hola mundo");
